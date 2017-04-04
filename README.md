@@ -7,8 +7,7 @@
 
 ## Deploy
 
-- `npm run dev`：连接测试数据库，用于开发，会实时通过 Babel 转码。
-
+- `npm run dev`：连接测试数据库，用于开发，会实时通过 Babel 转码并重启服务。
 - `npm run prod`：连接正式数据库。
 
 ## TODO
