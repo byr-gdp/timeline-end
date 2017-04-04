@@ -1,2 +1,3 @@
 #!/bin/bash
-NODE_ENV=production pm2 start index.js
+pm2 stop 'timeline-end'
+NODE_ENV=production pm2 restart index.js --name 'timeline-end'
