@@ -27,7 +27,7 @@ app.use(cors(corsOptions));
 app.use(session({
   secret: 'beAWellSwimmingFish', // 建议使用 128 个字符的随机字符串
   cookie: {
-    maxAge: 1000 * 60 * 60,
+    maxAge: 1000 * 60 * 60 * 24, // 24 小时
     httpOnly: true,
   },
   name: 'swimmingFish',
