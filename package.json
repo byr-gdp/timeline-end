@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "babel src -d lib",
-    "dev": "nodemon -w src -x ./restart.sh"
+    "dev": "nodemon -w src -x ./development.sh",
+    "prod": "./production.sh"
   },
   "author": "byr-gdp",
   "license": "ISC",

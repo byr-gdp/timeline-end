@@ -17,9 +17,11 @@ var corsOptions = {
 }
 
 // TODO: 数据库配置写入配置文件
-// 测试环境
-mongoose.connect('mongodb://127.0.0.1/test-timeline');
-// mongoose.connect('mongodb://127.0.0.1/work-timeline');
+if (process.env.NODE_ENV === 'production') {
+  mongoose.connect('mongodb://127.0.0.1/work-timeline');
+} else {
+  mongoose.connect('mongodb://127.0.0.1/test-timeline');
+}
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
